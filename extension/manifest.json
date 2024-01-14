@@ -13,6 +13,8 @@
   "background": {
     "service_worker": "background.js"
   },
+  "omnibox": { "keyword": "copilot" },
+
   "action": {
     "default_icon": {
       "16": "icons/icon.png",
@@ -20,13 +22,13 @@
       "48": "icons/icon.png",
       "128": "icons/icon.png"
     },
-    "permissions": ["tabs"],
-    "default_popup": "./popup/popup.html "
+    "permissions": ["tabs", "all_urls"],
+    "default_popup": "./popup/popup.html"
   },
   "content_scripts": [
     {
       "js": ["./content.js"],
-      "matches": ["*://copilot.microsoft.com/*", "*://*.chat.openai.com/*"],
+      "matches": ["<all_urls>"],
       "run_at": "document_end"
     }
   ]
