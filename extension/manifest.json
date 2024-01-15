@@ -13,7 +13,7 @@
   "background": {
     "service_worker": "background.js"
   },
-  "omnibox": { "keyword": "copilot" },
+  "omnibox": { "keyword": "hi" },
 
   "action": {
     "default_icon": {

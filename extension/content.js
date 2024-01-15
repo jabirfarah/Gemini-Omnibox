@@ -7,17 +7,16 @@ var __webpack_exports__ = {};
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action == "PROMPT") {
     // Your code to interact with the page, e.g., input text into a textarea
-    var editor = document.querySelector(".ql-editor");
+    var input = document.querySelector("#prompt-textarea");
     console.log(input);
-    if (editor) {
-      var _input = editor.querySelector("p");
-      _input.value = request.text;
+    if (input) {
+      input.value = request.text;
       // Trigger the input event to ensure any event listeners on the textarea are notified of the change
-      _input.dispatchEvent(new Event("input", {
+      input.dispatchEvent(new Event("input", {
         bubbles: true
       }));
-      // const button = document.querySelector("#prompt-textarea~button");
-      // button.click();
+      var button = document.querySelector("#prompt-textarea~button");
+      button.click();
     }
   }
 });
