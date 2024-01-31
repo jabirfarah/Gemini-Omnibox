@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Copilot in Address Bar",
-  "short_name": "Copilot in Address Bar",
-  "description": "Gain the ability to use Copilot in the Address Bar!",
+  "name": "Copilot",
+  "short_name": "Copilotr",
+  "description": "",
   "version": "1.0.1",
   "icons": {
     "16": "icons/logo.png",
@@ -16,6 +16,7 @@
   "omnibox": {
     "keyword": "gpt"
   },
+  "permissions": ["tabs", "contextMenus"],
   "action": {
     "default_icon": {
       "16": "icons/logo.png",
@@ -23,7 +24,6 @@
       "48": "icons/logo.png",
       "128": "icons/logo.png"
     },
-    "permissions": ["tabs", "all_urls", "contextMenus"],
     "default_popup": "./popup/popup.html"
   },
   "content_scripts": [
