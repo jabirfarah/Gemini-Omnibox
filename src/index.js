@@ -13,3 +13,15 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     }
   }
 });
+
+chrome.contextMenus.create({
+  id: "PROMPT",
+  title: "Buzz This",
+  contexts: ["page", "selection", "image", "link"],
+});
+
+chrome.contextMenus.onClicked.addListener(onClickHandler);
+// The onClicked callback function.
+function onClickHandler(info, tab) {
+  console.log;
+}

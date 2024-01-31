@@ -13,8 +13,9 @@
   "background": {
     "service_worker": "background.js"
   },
-  "omnibox": { "keyword": "hi" },
-
+  "omnibox": {
+    "keyword": "gpt"
+  },
   "action": {
     "default_icon": {
       "16": "icons/logo.png",
@@ -22,13 +23,13 @@
       "48": "icons/logo.png",
       "128": "icons/logo.png"
     },
-    "permissions": ["tabs", "all_urls"],
+    "permissions": ["tabs", "all_urls", "contextMenus"],
     "default_popup": "./popup/popup.html"
   },
   "content_scripts": [
     {
-      "js": ["./content.js"],
       "matches": ["<all_urls>"],
+      "js": ["./content.js"],
       "run_at": "document_end"
     }
   ]
