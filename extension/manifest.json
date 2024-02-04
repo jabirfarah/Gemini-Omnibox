@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Copilot",
-  "short_name": "Copilotr",
+  "name": "ChatGPT in Address Bar",
+  "short_name": "GPT-Omnibox",
   "description": "",
   "version": "1.0.1",
   "icons": {
@@ -23,12 +23,11 @@
       "32": "icons/logo.png",
       "48": "icons/logo.png",
       "128": "icons/logo.png"
-    },
-    "default_popup": "./popup/popup.html"
+    }
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://chat.openai.com/*"],
       "js": ["./content.js"],
       "run_at": "document_end"
     }
