@@ -5,27 +5,25 @@ This is a basic boilerplate for creating a Chrome Extension with Manifest 3. It 
 The folder structure is as follows:
 
 ```
-my-extension/
+ChatGPT-in-address-bar/
 ├── extension/
 │   ├── background.js
 │   ├── content.js
 │   ├── icons/
-│   │   ├── icon16.png
-│   │   ├── icon32.png
-│   │   ├── icon48.png
-│   │   └── icon128.png
-│   ├── popup/
-│   │   ├── popup.html
-│   │   └── popup.js
+│       ├── icon16.png
+│       ├── icon32.png
+│       ├── icon48.png
+│       └── icon128.png
+│
 │   └── manifest.json
-├── src/
-│   └── // source files for the extension
-├── webpack.config.js
-├── babel.config.js
-├── package.json
-└── node_modules/
-    └── // dependencies installed by npm
-
+│   
+├── src/  // Source files for the extension
+│   └── index.js
+├── webpack.config.js  // Webpack configuration
+├── babel.config.js   // Babel configuration
+├── package.json      // Project dependencies
+└── node_modules/    // Installed dependencies
+    
 ```
 
 ## Getting Started
