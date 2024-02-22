@@ -1,4 +1,4 @@
-console.log("start");
+
 
 function openNewTab(url) {
   chrome.tabs.create({ url: url }, function (tab) {
@@ -11,11 +11,9 @@ chrome.omnibox.onInputEntered.addListener(async function (text) {
   let url = "https://gemini.google.com/app";
   openNewTab(url);
 
-  // Wait for the new tab to finish loading
   chrome.tabs.onUpdated.addListener(function listener(tabId, completion, tab) {
     setTimeout(() => {
       if (tabId == tab.id && completion.status == "complete") {
-        // The tab has finished loading, remove the listener and send the message
         chrome.tabs.onUpdated.removeListener(listener);
         console.log(tabId);
         console.log(tab);
